@@ -1,4 +1,4 @@
-/* Verhaegh & Zn. — dark gray + digital patterns */
+/* Verhaegh & Zn. - dark gray + digital patterns */
 
 :root {
   --gray-950: #0a0a0a;
@@ -663,6 +663,85 @@ section {
   text-decoration-color: var(--gray-400);
 }
 
+/* ── Work / showcases ── */
+
+.work {
+  border-top: 1px solid var(--color-border);
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.work-item:nth-child(even) .work-media {
+  order: 2;
+}
+
+.work-media {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  background: var(--gray-950);
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+}
+
+.work-media img {
+  width: 100%;
+  height: auto;
+}
+
+.work-tag {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+.work-body h3 {
+  font-size: 1.35rem;
+  color: var(--white);
+  margin-bottom: 0.85rem;
+}
+
+.work-body p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--gray-400);
+}
+
+.work-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--gray-300);
+  text-decoration: underline;
+  text-decoration-color: var(--gray-600);
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.work-link:hover,
+.work-link:focus-visible {
+  color: var(--white);
+  text-decoration-color: var(--gray-400);
+}
+
 /* ── Clients ── */
 
 .clients {
@@ -907,6 +986,19 @@ section {
 
   .client-grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .work-item:nth-child(even) .work-media {
+    order: 0;
+  }
+
+  .work-list {
+    gap: 3.5rem;
   }
 
   .contact-inner {

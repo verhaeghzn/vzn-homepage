@@ -1,4 +1,4 @@
-# Verhaegh & Zn. — Homepage
+# Verhaegh & Zn. Homepage
 
 Static homepage for [verhaeghzn.nl](https://verhaeghzn.nl), deployable via GitHub Pages.
 
